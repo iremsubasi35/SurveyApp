@@ -8,10 +8,16 @@
 import SwiftUI
 
 @main
-struct SurveyAppApp: App {
+struct SurveyApp: App {
+    private let surveyView: SurveyView = {
+        let dataController = SurveyDataController()
+        let viewModel = SurveyViewModel(dataController: dataController)
+        let view = SurveyView(viewModel: viewModel)
+        return view
+    }()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            surveyView
         }
     }
 }

@@ -8,17 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		665052952A3208A400167E28 /* SurveyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665052942A3208A400167E28 /* SurveyAppApp.swift */; };
-		665052972A3208A400167E28 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665052962A3208A400167E28 /* ContentView.swift */; };
 		665052992A3208A700167E28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 665052982A3208A700167E28 /* Assets.xcassets */; };
 		6650529C2A3208A700167E28 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6650529B2A3208A700167E28 /* Preview Assets.xcassets */; };
+		665052A62A32091900167E28 /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665052A52A32091900167E28 /* SurveyView.swift */; };
+		665052A82A32093F00167E28 /* SurveyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665052A72A32093F00167E28 /* SurveyViewModel.swift */; };
+		665052AA2A32095C00167E28 /* SurveyDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665052A92A32095C00167E28 /* SurveyDataController.swift */; };
+		665052AC2A32098800167E28 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665052AB2A32098800167E28 /* ResultsView.swift */; };
+		665052AE2A3209A100167E28 /* ResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665052AD2A3209A100167E28 /* ResultsViewModel.swift */; };
+		665052B02A3209C000167E28 /* ResultsDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665052AF2A3209C000167E28 /* ResultsDataController.swift */; };
+		665052B32A320A4000167E28 /* SurveyCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 665052B12A320A4000167E28 /* SurveyCoreData.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		665052912A3208A400167E28 /* SurveyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurveyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		665052942A3208A400167E28 /* SurveyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyAppApp.swift; sourceTree = "<group>"; };
-		665052962A3208A400167E28 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		665052982A3208A700167E28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6650529B2A3208A700167E28 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		665052A52A32091900167E28 /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
+		665052A72A32093F00167E28 /* SurveyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewModel.swift; sourceTree = "<group>"; };
+		665052A92A32095C00167E28 /* SurveyDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyDataController.swift; sourceTree = "<group>"; };
+		665052AB2A32098800167E28 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		665052AD2A3209A100167E28 /* ResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewModel.swift; sourceTree = "<group>"; };
+		665052AF2A3209C000167E28 /* ResultsDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsDataController.swift; sourceTree = "<group>"; };
+		665052B22A320A4000167E28 /* SurveyCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SurveyCoreData.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +63,11 @@
 		665052932A3208A400167E28 /* SurveyApp */ = {
 			isa = PBXGroup;
 			children = (
+				665052A22A3208CE00167E28 /* Pages */,
 				665052942A3208A400167E28 /* SurveyAppApp.swift */,
-				665052962A3208A400167E28 /* ContentView.swift */,
 				665052982A3208A700167E28 /* Assets.xcassets */,
 				6650529A2A3208A700167E28 /* Preview Content */,
+				665052B12A320A4000167E28 /* SurveyCoreData.xcdatamodeld */,
 			);
 			path = SurveyApp;
 			sourceTree = "<group>";
@@ -65,6 +78,35 @@
 				6650529B2A3208A700167E28 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		665052A22A3208CE00167E28 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				665052A42A32090100167E28 /* Results */,
+				665052A32A3208F700167E28 /* Survey */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		665052A32A3208F700167E28 /* Survey */ = {
+			isa = PBXGroup;
+			children = (
+				665052A52A32091900167E28 /* SurveyView.swift */,
+				665052A72A32093F00167E28 /* SurveyViewModel.swift */,
+				665052A92A32095C00167E28 /* SurveyDataController.swift */,
+			);
+			path = Survey;
+			sourceTree = "<group>";
+		};
+		665052A42A32090100167E28 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				665052AB2A32098800167E28 /* ResultsView.swift */,
+				665052AD2A3209A100167E28 /* ResultsViewModel.swift */,
+				665052AF2A3209C000167E28 /* ResultsDataController.swift */,
+			);
+			path = Results;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +179,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				665052972A3208A400167E28 /* ContentView.swift in Sources */,
+				665052AE2A3209A100167E28 /* ResultsViewModel.swift in Sources */,
+				665052AC2A32098800167E28 /* ResultsView.swift in Sources */,
 				665052952A3208A400167E28 /* SurveyAppApp.swift in Sources */,
+				665052AA2A32095C00167E28 /* SurveyDataController.swift in Sources */,
+				665052B32A320A4000167E28 /* SurveyCoreData.xcdatamodeld in Sources */,
+				665052A82A32093F00167E28 /* SurveyViewModel.swift in Sources */,
+				665052B02A3209C000167E28 /* ResultsDataController.swift in Sources */,
+				665052A62A32091900167E28 /* SurveyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +387,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		665052B12A320A4000167E28 /* SurveyCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				665052B22A320A4000167E28 /* SurveyCoreData.xcdatamodel */,
+			);
+			currentVersion = 665052B22A320A4000167E28 /* SurveyCoreData.xcdatamodel */;
+			path = SurveyCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 665052892A3208A400167E28 /* Project object */;
 }
