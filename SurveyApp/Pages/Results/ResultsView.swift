@@ -14,10 +14,10 @@ struct ResultsView: View {
     }
     var body: some View {
         VStack{
-            
+            Text(viewModel.surveyDataResultsPresentation.numberOfChooseWhiteColor)
         }
         .onAppear {
-            viewModel.processData()
+            viewModel.initialize()
                }
     }
 }

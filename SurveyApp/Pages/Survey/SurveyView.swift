@@ -16,7 +16,7 @@ struct SurveyView: View {
         self.viewModel = viewModel
     }
     
-    private  let colorChoose = ["White","Purple","Red","Green","Blue","Yellow","Black"]
+    private  let colorChoose = ["White","Purple","Blue","Black"]
     
     var body: some View {
         NavigationView{
