@@ -20,6 +20,12 @@ struct SurveyResult{
     var percentLevel60: Int = 0
     var percentLevel80: Int = 0
     var percentLevel100: Int = 0
+    var succesStep3 : Int = 0
+    var succesStep8 : Int = 0
+    var succesStep8Plus : Int = 0
+    var typePoem: Int = 1
+    var typeSong: Int = 2
+    var typePicture: Int = 3
 }
 
 final class ResultsDataController: ObservableObject {
@@ -68,16 +74,30 @@ final class ResultsDataController: ObservableObject {
             if data.percent >= 80 && data.percent < 100 {
                 surveyResult.percentLevel100 += 1
             }
+            if data.step >= 0 && data.step <= 3 {
+                surveyResult.succesStep3 += 1
+            }
+            if data.step > 3 && data.step <= 8 {
+                surveyResult.succesStep8 += 1
+            }
+            if data.step > 8  {
+                surveyResult.succesStep8Plus += 1
+            }
+            if data.type == 1 {
+                surveyResult.typePoem += 1
+            }
+            if data.type == 2 {
+                surveyResult.typeSong += 1
+            }
+            if data.type == 3 {
+                surveyResult.typePicture += 1
+            }
             if data.toBe == true {
                 surveyResult.toBeCount += 1
             }else {
                 surveyResult.notToBeCount += 1
             }
         }
-        print("\(surveyResult.numberOfChooseWhiteColor) kişi White seçti")
-        print("\(surveyResult.numberOfChoosePurpleColor) kişi Purple seçti")
-        print("\(surveyResult.numberOfChooseBlueColor) kişi Blue seçti")
-        print("\(surveyResult.numberOfChooseBlackColor) kişi Black seçti")
         self.dataResults.send(surveyResult)
     }
     

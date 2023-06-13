@@ -14,7 +14,19 @@ struct SurveyDataResultsPresentation: Identifiable{
     var numberOfChoosePurpleColor: String = ""
     var numberOfChooseBlueColor: String = ""
     var numberOfChooseBlackColor: String = ""
-    
+    var optimisticLevel20: String = ""
+    var optimisticLevel40: String = ""
+    var optimisticLevel60: String = ""
+    var optimisticLevel80: String = ""
+    var optimisticLevel100: String = ""
+    var selectToBe: String = ""
+    var selectNotToBe: String = ""
+    var stepValue3: String = ""
+    var stepValue8: String = ""
+    var stepValue8Plus: String = ""
+    var poemType: String = ""
+    var songType: String = ""
+    var picturType: String = ""
 }
 final class ResultsViewModel: ObservableObject {
     
@@ -163,7 +175,26 @@ final class ResultsViewModel: ObservableObject {
                 surveyDataPresentation.numberOfChooseBlueColor = "\(statics.numberOfChooseBlueColor) kişi mavi seçti"
                 surveyDataPresentation.numberOfChoosePurpleColor = "\(statics.numberOfChoosePurpleColor) kişi mor seçti"
                 surveyDataPresentation.numberOfChooseWhiteColor = "\(statics.numberOfChooseWhiteColor) kişi beyaz seçti"
-                
+                // optimistic value
+                surveyDataPresentation.optimisticLevel20 = "\(statics.percentLevel20) kişi %0-20 arasında bir değer seçti"
+                surveyDataPresentation.optimisticLevel40 = "\(statics.percentLevel40) kişi %20-40 arasında bir değer seçti"
+                surveyDataPresentation.optimisticLevel60 = "\(statics.percentLevel60) kişi %40-60 arasında bir değer seçti"
+                surveyDataPresentation.optimisticLevel80 = "\(statics.percentLevel80) kişi %60-80 arasında bir değer seçti"
+                surveyDataPresentation.optimisticLevel100 = "\(statics.percentLevel100) kişi %80-100 arasında bir değer seçti"
+                //ToBe
+                surveyDataPresentation.selectToBe = "\(statics.toBeCount) kişi toBe seçti"
+                surveyDataPresentation.selectNotToBe = "\(statics.notToBeCount) kişi NotToBe seçti"
+                // Step
+                surveyDataPresentation.stepValue3 =
+                "\(statics.succesStep3) kişi 0-3 arası değer seçti"
+                surveyDataPresentation.stepValue8 =
+                "\(statics.succesStep8) kişi 3-8 arası değer seçti"
+                surveyDataPresentation.stepValue8Plus =
+                "\(statics.succesStep8Plus) kişi 8den yüksek değer seçti"
+                // Type
+                surveyDataPresentation.poemType = "\(statics.typePoem) kişi şiir seçti"
+                surveyDataPresentation.songType = "\(statics.typeSong) kişi şarkı seçti"
+                surveyDataPresentation.picturType = "\(statics.typePicture) kişi resim seçti"
                 self?.surveyDataResultsPresentation = surveyDataPresentation
             }
             .store(in: &cancellables)
